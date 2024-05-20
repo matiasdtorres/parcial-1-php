@@ -93,17 +93,17 @@ if(isset($_GET["get"]))
     {
         $precio1 = $_GET["precio1"];
         $precio2 = $_GET["precio2"];
-        $ventas = array();
-        if (file_exists("./ventas.json"))
+        $prendas = array();
+        if (file_exists("./tienda.json"))
         {
-            $ventas = json_decode(file_get_contents("./ventas.json"), true);
+            $prendas = json_decode(file_get_contents("./tienda.json"), true);
         }
         $lista = array();
-        foreach ($ventas as $ventaIndividual)
+        foreach ($prendas as $prendaIndividual)
         {
-            if ($ventaIndividual["precio"] >= $precio1 && $ventaIndividual["precio"] <= $precio2)
+            if ($prendaIndividual["precio"] >= $precio1 && $prendaIndividual["precio"] <= $precio2)
             {
-                array_push($lista, $ventaIndividual);
+                array_push($lista, $prendaIndividual);
             }
         }
         echo json_encode($lista, JSON_PRETTY_PRINT);
@@ -152,7 +152,7 @@ if(isset($_GET["get"]))
     {
         array_push($lista, $ventaIndividual["tipo"]);
     }
-    
+
     $lista = array_count_values($lista);
     arsort($lista);
     echo json_encode($lista, JSON_PRETTY_PRINT);

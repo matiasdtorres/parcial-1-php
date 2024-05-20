@@ -1,12 +1,42 @@
 [
     {
-        "id": 0,
-        "nombre": "ProRusty",
-        "precio": "15",
+        "id": 1,
+        "nombre": "ProRustyARG",
+        "precio": "100",
         "tipo": "camiseta",
         "talla": "L",
         "color": "naranja",
-        "stock": 18,
-        "imagen": "ProRusty_camiseta.png"
+        "stock": "25",
+        "imagen": "ProRustyARG_camiseta.png"
+    },
+    {
+        "id": 2,
+        "nombre": "ProRustyPT",
+        "precio": "50",
+        "tipo": "camiseta",
+        "talla": "L",
+        "color": "naranja",
+        "stock": "25",
+        "imagen": "ProRustyPT_camiseta.png"
+    },
+    {
+        "id": 3,
+        "nombre": "ProRustyURU",
+        "precio": "75",
+        "tipo": "camiseta",
+        "talla": "L",
+        "color": "naranja",
+        "stock": "25",
+        "imagen": "ProRustyURU_camiseta.png"
+    },
+    {
+        "id": 3,
+        "nombre": "ProRustyURU",
+        "precio": "75",
+        "tipo": "camiseta",
+        "talla": "L",
+        "color": "naranja",
+        "stock": "25",
+        "imagen": "ProRustyURU_camiseta.png"
     }
 ]
