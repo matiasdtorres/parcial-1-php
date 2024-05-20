@@ -17,9 +17,9 @@ if (isset($_POST["nombre"]) && isset($_POST["tipo"]) && isset($_POST["color"]))
 
     $prendas = json_decode(file_get_contents("./tienda.json", JSON_PRETTY_PRINT), true);
 
-    foreach ($prendas as $prenda_individual)
+    foreach ($prendas as $prendaIndividual)
     {
-        if ($prenda_individual["nombre"] == $nombre && $prenda_individual["tipo"] == $tipo && $prenda_individual["color"] == $color)
+        if ($prendaIndividual["nombre"] == $nombre && $prendaIndividual["tipo"] == $tipo && $prendaIndividual["color"] == $color)
         {
             echo "existe";
             exit;

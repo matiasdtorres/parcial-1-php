@@ -6,7 +6,7 @@
         "tipo": "camiseta",
         "talla": "L",
         "color": "naranja",
-        "stock": "25",
+        "stock": 18,
         "imagen": "ProRusty_camiseta.png"
     }
 ]

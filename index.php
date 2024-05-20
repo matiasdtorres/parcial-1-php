@@ -31,6 +31,9 @@ if(isset($_GET["get"]) || isset($_POST["post"]))
                 case "prendaconsultar":
                     require_once "./prendaConsultar.php";
                     break;
+                case "altaventa":
+                    require_once "./altaVenta.php";
+                    break;
                 default:
                     echo "tipo no permitido";
                     break;
