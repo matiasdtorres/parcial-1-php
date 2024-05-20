@@ -7,6 +7,9 @@ Se guardan los datos en el archivo de texto tienda.json, tomando un id autoincre
 (emulado). Si el nombre y tipo ya existen, se actualiza el precio y se suma al stock existente.
 Completar el alta con imagen de la prenda, guardando la imagen con el nombre y tipo como identificación en la
 carpeta /ImagenesDeRopa/2024
+
+## PARTE POR PARTE ##
+https://github.com/matiasdtorres/parcial-1-php
 */
 
 if (isset($_POST["nombre"]) && isset($_POST["precio"]) && isset($_POST["tipo"]) && isset($_POST["talla"]) && isset($_POST["color"]) && isset($_POST["stock"]) && isset($_FILES["imagen"]))

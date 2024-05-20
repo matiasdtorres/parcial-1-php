@@ -9,6 +9,9 @@ descontar la cantidad vendida del stock.
 b- (1 pt) Completar el alta de la venta con imagen de la venta (ej: una imagen del usuario), guardando la imagen
 con el nombre+tipo+talla+email(solo usuario hasta el @) y fecha de la venta en la carpeta
 /ImagenesDeVenta/2024.
+
+## PARTE POR PARTE ##
+https://github.com/matiasdtorres/parcial-1-php
 */
 
 if (isset($_POST["email"]) && isset($_POST["nombre"]) && isset($_POST["tipo"]) && isset($_POST["talla"]) && isset($_POST["stock"]) && isset($_FILES["imagen"]))

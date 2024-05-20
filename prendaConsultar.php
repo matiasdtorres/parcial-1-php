@@ -7,6 +7,9 @@ PrendaConsultar.php:
 (por POST)
 Se ingresa Nombre, Tipo y Color, si coincide con algún registro del archivo
 tienda.json, retornar “existe”. De lo contrario, informar si no existe el tipo o el nombre.
+
+## PARTE POR PARTE ##
+https://github.com/matiasdtorres/parcial-1-php
 */
 
 if (isset($_POST["nombre"]) && isset($_POST["tipo"]) && isset($_POST["color"]))

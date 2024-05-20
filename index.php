@@ -5,6 +5,8 @@ A- (1 pt.)
 index.php
 Recibe todas las peticiones que realiza el postman, y administra a qué archivo se debe incluir.
 
+## PARTE POR PARTE ##
+https://github.com/matiasdtorres/parcial-1-php
 */
 
 if(isset($_GET["get"]) || isset($_POST["post"]))
