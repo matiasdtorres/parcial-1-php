@@ -48,6 +48,116 @@ if(isset($_GET["get"]))
     }
     echo $cantidad;
 
+    // b- El listado de ventas de un usuario ingresado.
+    if(isset($_GET["usuario"]))
+    {
+        $usuario = $_GET["usuario"];
+        $ventas = array();
+        if (file_exists("./ventas.json"))
+        {
+            $ventas = json_decode(file_get_contents("./ventas.json"), true);
+        }
+        $lista = array();
+        foreach ($ventas as $ventaIndividual)
+        {
+            if ($ventaIndividual["email"] == $usuario)
+            {
+                array_push($lista, $ventaIndividual);
+            }
+        }
+        echo json_encode($lista, JSON_PRETTY_PRINT);
+    }
+
+    // c- El listado de ventas por tipo de prenda.
+    if(isset($_GET["tipo"]))
+    {
+        $tipo = $_GET["tipo"];
+        $ventas = array();
+        if (file_exists("./ventas.json"))
+        {
+            $ventas = json_decode(file_get_contents("./ventas.json"), true);
+        }
+        $lista = array();
+        foreach ($ventas as $ventaIndividual)
+        {
+            if ($ventaIndividual["tipo"] == $tipo)
+            {
+                array_push($lista, $ventaIndividual);
+            }
+        }
+        echo json_encode($lista, JSON_PRETTY_PRINT);
+    }
+
+    // d- El listado de prendas cuyo precio esté entre dos números ingresados.
+    if(isset($_GET["precio1"]) && isset($_GET["precio2"]))
+    {
+        $precio1 = $_GET["precio1"];
+        $precio2 = $_GET["precio2"];
+        $ventas = array();
+        if (file_exists("./ventas.json"))
+        {
+            $ventas = json_decode(file_get_contents("./ventas.json"), true);
+        }
+        $lista = array();
+        foreach ($ventas as $ventaIndividual)
+        {
+            if ($ventaIndividual["precio"] >= $precio1 && $ventaIndividual["precio"] <= $precio2)
+            {
+                array_push($lista, $ventaIndividual);
+            }
+        }
+        echo json_encode($lista, JSON_PRETTY_PRINT);
+    }
+
+    // e- El listado de ingresos por día de una fecha ingresada. Si no se ingresa una fecha, se muestran los ingresos de todos los días.
+    if(isset($_GET["fecha"]))
+    {
+        $fecha = $_GET["fecha"];
+    }
+    else
+    {
+        $fecha = strtotime("-1 day");
+        $fecha = date("d-m-Y", $fecha);
+    }
+
+    $fecha = strtotime($fecha);
+    $fecha = date("d-m-Y", $fecha);
+    $ventas = array();
+
+    if (file_exists("./ventas.json"))
+    {
+        $ventas = json_decode(file_get_contents("./ventas.json"), true);
+    }
+
+    $lista = array();
+
+    foreach ($ventas as $ventaIndividual)
+    {
+        if ($ventaIndividual["fecha"] == $fecha)
+        {
+            array_push($lista, $ventaIndividual);
+        }
+    }
+    echo json_encode($lista, JSON_PRETTY_PRINT);
+
+    // f- Mostrar el producto más vendido.
+    if (file_exists("./ventas.json"))
+    {
+        $ventas = json_decode(file_get_contents("./ventas.json"), true);
+    }
+
+    $lista = array();
+
+    foreach ($ventas as $ventaIndividual)
+    {
+        array_push($lista, $ventaIndividual["tipo"]);
+    }
+    
+    $lista = array_count_values($lista);
+    arsort($lista);
+    echo json_encode($lista, JSON_PRETTY_PRINT);
+
+
 }
 
 ?>
