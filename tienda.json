@@ -1,0 +1,12 @@
+[
+    {
+        "id": 0,
+        "nombre": "ProRusty",
+        "precio": "15",
+        "tipo": "camiseta",
+        "talla": "L",
+        "color": "naranja",
+        "stock": "25",
+        "imagen": "ProRusty_camiseta.png"
+    }
+]
