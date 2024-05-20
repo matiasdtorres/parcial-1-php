@@ -17,7 +17,7 @@ if(isset($_GET["get"]) || isset($_POST["post"]))
             switch ($_GET["get"])
             {
                 case "consultaventas":
-                    require_once "./ConsultasVentas.php";
+                    require_once "./consultasVentas.php";
                     break;
                 default:
                     echo "parametro no permitido";
