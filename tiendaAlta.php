@@ -76,7 +76,7 @@ if (isset($_POST["nombre"]) && isset($_POST["precio"]) && isset($_POST["tipo"]) 
     if (!file_exists("./ImagenesDeRopa/2024"))
     {
         //Gracias Arqui
-        mkdir("./ImagenesDeRopa/2024");
+        mkdir("./ImagenesDeRopa/2024", 0777, true);
     }
     move_uploaded_file($imagen["tmp_name"], $imagen_path);
 
