@@ -30,13 +30,33 @@
         "imagen": "ProRustyURU_camiseta.png"
     },
     {
-        "id": 3,
-        "nombre": "ProRustyURU",
-        "precio": "75",
-        "tipo": "camiseta",
-        "talla": "L",
-        "color": "naranja",
-        "stock": "25",
-        "imagen": "ProRustyURU_camiseta.png"
+        "id": 4,
+        "nombre": "JeanAzul",
+        "precio": "3000",
+        "tipo": "pantalon",
+        "talla": "S",
+        "color": "negro",
+        "stock": 1,
+        "imagen": "JeanAzul_pantalon.png"
+    },
+    {
+        "id": 5,
+        "nombre": "JeanNegro",
+        "precio": "300",
+        "tipo": "pantalon",
+        "talla": "S",
+        "color": "negro",
+        "stock": "2",
+        "imagen": "JeanNegro_pantalon.png"
+    },
+    {
+        "id": 5,
+        "nombre": "JeanNegro",
+        "precio": "300",
+        "tipo": "pantalon",
+        "talla": "S",
+        "color": "negro",
+        "stock": "2",
+        "imagen": "JeanNegro_pantalon.png"
     }
 ]

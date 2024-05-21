@@ -1,32 +1,36 @@
 [
     {
         "id": 0,
+        "id_pedido": "0",
         "email": "matias@matias.com",
-        "nombre": "ProRusty",
-        "tipo": "camiseta",
-        "talla": "L",
+        "nombre": "JeanAzul",
+        "tipo": "pantalon",
+        "talla": "S",
         "stock": "1",
-        "imagen": "ProRusty_camiseta_L_matias_21-05-2024_.png",
-        "fecha": "20-05-2024"
+        "imagen": "JeanAzul_pantalon_S_matias_21-05-2024_.png",
+        "fecha": "21-05-2024"
     },
     {
         "id": 1,
-        "email": "matias@matias.com",
-        "nombre": "ProRusty",
-        "tipo": "camiseta",
-        "talla": "L",
+        "id_pedido": "1",
+        "email": "municipal@municipal.com.ar",
+        "nombre": "Municipal",
+        "tipo": "pantalon",
+        "talla": "XL",
         "stock": "1",
-        "imagen": "ProRusty_camiseta_L_matias_21-05-2024_.png",
+        "imagen": "JeanAzul_pantalon_S_matias_21-05-2024_.png",
         "fecha": "21-05-2024"
     },
     {
         "id": 2,
+        "id_pedido": "2",
         "email": "matias@matias.com",
-        "nombre": "ProRusty",
-        "tipo": "camiseta",
-        "talla": "L",
+        "nombre": "JeanAzul",
+        "tipo": "pantalon",
+        "talla": "S",
         "stock": "1",
-        "imagen": "ProRusty_camiseta_L_matias_21-05-2024_.png",
-        "fecha": "21-05-2024"
+        "imagen": "JeanAzul_pantalon_S_matias_21-05-2024_.png",
+        "fecha": "21-05-2024",
+        "borrado": "si"
     }
 ]

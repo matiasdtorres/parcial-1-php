@@ -9,13 +9,11 @@ Recibe todas las peticiones que realiza el postman, y administra a qué archivo 
 https://github.com/matiasdtorres/parcial-1-php
 */
 
-if(isset($_GET["get"]) || isset($_POST["post"]))
+if (isset($_GET["get"]) || isset($_POST["post"]) || $_SERVER["REQUEST_METHOD"] === "DELETE" || $_SERVER["REQUEST_METHOD"] === "PUT")
 {
-    switch ($_SERVER["REQUEST_METHOD"])
-    {
+    switch ($_SERVER["REQUEST_METHOD"]) {
         case "GET":
-            switch ($_GET["get"])
-            {
+            switch ($_GET["get"]) {
                 case "consultaventas":
                     require_once "./consultasVentas.php";
                     break;
@@ -25,8 +23,7 @@ if(isset($_GET["get"]) || isset($_POST["post"]))
             }
             break;
         case "POST":
-            switch ($_POST["post"])
-            {
+            switch ($_POST["post"]) {
                 case "tiendaalta":
                     require_once "./tiendaAlta.php";
                     break;
@@ -41,18 +38,46 @@ if(isset($_GET["get"]) || isset($_POST["post"]))
                     break;
             }
             break;
-            default:
-                echo "metodo no permitido";
-                break;
-        case "PUT":
-            require_once "ModificarVenta.php";
+        case "DELETE":
+            parse_str(file_get_contents("php://input"), $_DELETE);
+            switch ($_DELETE["delete"]) {
+                case "borrarventa":
+                    require_once "./borrarVenta.php";
+                    break;
+                default:
+                    echo "parametro no permitido";
+                    break;
+            }
             break;
-        }
-        
+        case "PUT":
+            parse_str(file_get_contents("php://input"), $_PUT);
+            switch ($_PUT["put"])
+            {
+                case "modificarventa":
+                    require_once "./modificarVenta.php";
+                    break;
+                default:
+                    echo "parametro no permitido";
+                    break;
+            }
+            break;
+        default:
+            echo "metodo no permitido";
+            break;
+    }
 }
 else
 {
     echo "parametro no permitido";
 }
 
+
+/*
+1 - dar de alta una prenda con los datos
+nombre: "JeanAzul", precio: 300, tipo: "pantalon", talla: "S", color: "negro", stock: 2
+2 - Dar de alta una venta en el producto que acabamos de crear
+4 - Hacer consultas de listados
+5 - Modificar la venta del punto 2
+6 - Dar de alta un conjunto que incluya el pantalón del punto 1
+*/
 ?>

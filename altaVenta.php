@@ -67,6 +67,7 @@ if (isset($_POST["email"]) && isset($_POST["nombre"]) && isset($_POST["tipo"]) &
 
             $venta = array(
                 "id" => $id,
+                "id_pedido" => strval($id),
                 "email" => $email,
                 "nombre" => $nombre,
                 "tipo" => $tipo,
